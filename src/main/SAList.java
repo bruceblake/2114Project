@@ -18,13 +18,12 @@ public class SAList {
 
   public void addFirst(Object obj) {
     ListNode node = new ListNode(obj, front);
-    front = node;
+    this.front = node;
+    remIndex = listSize;
     listSize++;
   }
 
   public Object get(int n) {
-    // 1 -> 2 -> 3 -> 4 -> 5
-    // f
     ListNode current;
     int currentIndex;
 
@@ -36,7 +35,7 @@ public class SAList {
       currentIndex = 0;
     }
 
-    while (currentIndex < n) {
+    while (currentIndex < n && current != null) {
       current = current.getNext();
       currentIndex++;
     }
@@ -44,16 +43,20 @@ public class SAList {
     remNode = current;
     remIndex = currentIndex;
 
-    return current.getValue();
+    if (current != null) {
+      return current.getValue();
+    } else {
+      return null;
+    }
 
   }
 
   public int getMostRecentIndex() {
-
+    return this.remIndex;
   }
 
   public Object getMostRecentValue() {
-
+    return this.remNode.getValue();
   }
 
 }
