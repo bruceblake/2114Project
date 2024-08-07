@@ -4,10 +4,6 @@ import java.util.*;
 
 public class SAListTest extends TestCase {
 
-  public static void main(String[] args) {
-
-  }
-
   class Student {
     public String name;
 
