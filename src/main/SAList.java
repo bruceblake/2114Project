@@ -1,6 +1,33 @@
 
 public class SAList
   {
+
+  class ListNode {
+  private Object value;
+  private ListNode next;
+
+  public ListNode(Object initValue, ListNode initNext) {
+    value = initValue;
+    next = initNext;
+  }
+
+  public Object getValue() {
+    return value;
+  }
+
+  public ListNode getNext() {
+    return next;
+  }
+
+  public void setValue(Object theNewValue) {
+    value = theNewValue;
+  }
+
+  public void setNext(ListNode theNewNext) {
+    next = theNewNext;
+  }
+}
+    
   private ListNode front; // first node of this list (null if empty)
   private int listSize; // the number of elements in this list
   private int remIndex; // the index of the remembered node
