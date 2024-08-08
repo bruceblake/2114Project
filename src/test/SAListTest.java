@@ -80,7 +80,16 @@ public class SAListTest extends TestCase {
     assertTrue(shouldBeE.equals(e));
     assertEquals(list.getMostRecentIndex(), 4);
     assertEquals(list.getMostRecentValue(), shouldBeE);
+    System.out.println("test!");
 
+    assertNull(list.get(10));
+
+  }
+
+  public void testEmptyListGet() {
+    SAList emptyList = new SAList();
+    assertNull(emptyList.get(0));
+    assertEquals(emptyList.getMostRecentIndex(), 0);
   }
 
 }

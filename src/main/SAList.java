@@ -1,6 +1,6 @@
 
-public class SAList
-  {
+public class SAList {
+
   private ListNode front; // first node of this list (null if empty)
   private int listSize; // the number of elements in this list
   private int remIndex; // the index of the remembered node
@@ -12,6 +12,7 @@ public class SAList
     remIndex = -1;
     remNode = null;
     listSize = 0;
+    System.out.println("main");
   }
 
   public int size() {
@@ -45,12 +46,7 @@ public class SAList
     remNode = current;
     remIndex = currentIndex;
 
-    if (current != null) {
-      return current.getValue();
-    } else {
-      return null;
-    }
-
+    return current.getValue();
   }
 
   public int getMostRecentIndex() {
