@@ -1,6 +1,5 @@
 
 public class SAList {
-
   private ListNode front; // first node of this list (null if empty)
   private int listSize; // the number of elements in this list
   private int remIndex; // the index of the remembered node
