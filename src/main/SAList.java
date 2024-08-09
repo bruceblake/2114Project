@@ -11,7 +11,6 @@ public class SAList {
     remIndex = -1;
     remNode = null;
     listSize = 0;
-    System.out.println("main");
   }
 
   public int size() {
